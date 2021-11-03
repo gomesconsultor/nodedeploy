@@ -1,0 +1,21 @@
+import { Request, Response } from "express";
+import { CreateMessageService } from "../services/CreateMessageService";
+
+
+class CreateMessageController {
+  async handle(request: Request, response: Response) {
+     
+     const { message } = request.body;
+     console.log(message);
+// precisamos receber o id do usuario logado e precisa estar logado na aplicação 
+     //const { user_id } = request;
+     const user_id = "1a70ba78-d371-4de7-94f0-d3dce24abc85"
+     const service =  new CreateMessageService();
+     const result = await service.execute("Alo Mundo", user_id);
+
+     return response.json(result);         
+  }
+
+}
+
+export { CreateMessageController }

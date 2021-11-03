@@ -1,0 +1,70 @@
+Iniciando o projeto
+yarn init -y
+yarn add express 
+yarn add -D @types/express typescript ts-node-dev
+# ts-node-dev ->Serve para rodar a nossa aplicação em typescript
+
+#Configurando Typescript
+yarn tsc --init
+
+{
+  "compilerOptions": {
+
+    "target": "es2017",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "module": "commonjs",                                /* Specify what module code is generated. */
+    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
+    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+    "strict": false,                                      /* Enable all strict type-checking options. */
+    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+  }
+}
+
+# Criaremos agora o nosso app na pasta src
+
+import express from "express";
+....
+
+Instalamdo ORM Prisma
+Fonte; https://www.prisma.io
+
+# Instalando Prisma
+
+npm install prism --save-dev
+
+npx prisma
+
+npx prisma init
+
+yarn add -D prisma
+
+yarn prisma init
+
+
+#Configurando OAuth Apps no github
+Entrando em sua conta do git vai em Settings no menu do avatar > Developer settings > OAuth Apps > 
+Clique em New OAuth App
+  Application name -> Gabi Node
+  HomePage URL ->  http://localhost:4000
+
+  Application description ->  Meus serviços designer sobramcellha
+  Authorization callback URL -> http://localhost:4000/signin/callback
+
+Clique em Register application     
+
+Ele Geraa um Client ID
+E tambem é preciso gerar um Cilent secrets -  clicando em "Generate new client secret"
+
+Vai solicitar a senha do seu guthub e confirme
+ depois gerar o seu client secrtet - !!! copie em um lugar seguro!!!!!
+
+# Para usar process.env preciso instalar uma depedencia
+yarn add dotenv
+
+yarn add axios
+
+Para gerar e ler token preciso instalar 
+yarn add jsonwebtoken
+
+
+Usando socket io
+
